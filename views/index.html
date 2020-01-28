@@ -1,10 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>DELI-VERY</title>
+        <title>Ordering Burgers</title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" type="text/css" href="./css/style.css">
     </head>
     <body>
-        <h1>Hello World!!!</h1>
-        <a href="/map" target="_blank">Open map in new window</a>.
+        <main>
+            <header>
+                <h1>Välkommen till BurgerOnline</h1>
+                <img src="https://previews.123rf.com/images/asakosakura/asakosakura1406/asakosakura140600047/29416588-seamless-avec-des-hamburgers-de-style-de-bande-dessin%C3%A9e-sur-un-ant%C3%A9c%C3%A9dent-jaune.jpg" alt="span" title="hamburger background" id="headerbg">
+            </header>
+            <section id="burgerinfo">
+                <h2>Välj hamburgare</h2>
+                <p>Här väljer du vilker hamburgare du vill ha.</p>
+                
+                <div id="wrapper">
+                    <div class="box a">
+                        <p>The Void Burger</p>
+                        <img src="https://previews.123rf.com/images/ha4ipuri/ha4ipuri1806/ha4ipuri180600022/103956150-hamburger-bread-or-bun-without-anything-isolated-on-white-background-clipping-path.jpg" alt="span" title="An empty burger" width="300" height="300">
+                        <dl>
+                            <dt>Innehåll:</dt>
+                                <dd>Bröd</dd>
+                                    <dt>Näringsvärde:</dt>
+                                <dd>60 kcal</dd>
+                                    <dt>Allergier:</dt>
+                                <dd>Brödet innehåller <span class="allergy">gluten</span></dd>
+                        </dl>
+                    </div>
+                    <div class="box b">
+                        <p>The Cheese Burger</p>
+                        <img src="https://p7.hiclipart.com/preview/520/119/677/french-fries-cheeseburger-whopper-buffalo-burger-hamburger-big-burger.jpg" alt="span" title="A cheese burger" width="300" height="300"> 
+                        <dl>
+                            <dt>Innehåll:</dt>
+                                <dd>Bröd</dd>
+                                <dd>90g Nötfärsburgare</dd>
+                                <dd>Ost</dd>
+                                <dd>Sallad, tomat, gurka</dd>
+                                <dd>Hamburgare dressing</dd>        
+                            <dt>Näringsvärde:</dt>
+                                <dd>450 kcal</dd>
+                            <dt>Allergier:</dt>
+                                <dd>Brödet innehåller <span class="allergy">gluten</span></dd>
+                                <dd>Osten innehåller <span class="allergy">laktose</span></dd>
+                        </dl>
+                    </div>
+                    <div class="box c">
+                        <p>The Extra Meat-burger</p>
+                        <img src="http://www.bigkitchenafrica.com/imgs/DSC_1303png2.png" alt="span" title="a burger with extra meat" width="300" height="300">
+                        <dl>
+                            <dt>Innehåll:</dt>
+                                <dd>Bröd</dd>
+                                <dd>2st 90g Nötfärsburgare</dd>
+                                <dd>Tomat, gurka</dd>
+                                <dd>BBQ sås</dd>
+                                <br>                        
+                            <dt>Näringsvärde:</dt>
+                                <dd>640 kcal</dd>
+                            <dt>Allergier:</dt>
+                                <dd>Brödet innehåller <span class="allergy">gluten</span></dd>
+                                <dd>Osten innehåller <span class="allergy">laktose</span></dd>
+                        </dl>
+                    </div>
+                </div>
+                
+            </section>
+            <section id="kundinfo">
+                <section id="contact">
+                    <h2>Kund information</h2>
+                    <p>Här fyller du i nödvändig information om dig själv.</p>
+                    <h3>Leverans information</h3>
+                    <form>
+                        <p>
+                            <label for="fullname">Fullständigt namn</label><br>
+                            <input type="text" id="fullname" name="fn" required="required" placeholder="För- och efter namn" />
+                        </p>
+                        <p>
+                            <label for="email">E-mail</label><br>
+                            <input type="email" id="email" name="em" required="required" placeholder="E-mail adress" />
+                        </p>
+                        <p>
+                            <label for="street">Gatunamn</label><br>
+                            <input type="text" id="street" name="st" required="required" placeholder="Gatunamn" />
+                        </p>
+                        <p>
+                            <label for="street">Husnr</label><br>
+                            <input type="number" id="street" name="st" required="required" placeholder="Husnr" />
+                        </p>
+                    
+              
+                        <p>
+                            <label for="payment">Betalnings alternativ</label><br>
+                            <select id="payment" name="pmt">
+                                <option selected="selected">Visa</option>
+                                <option>Mastercard</option>
+                                <option>Amex Black Card</option>
+                                <option>Kontant</option>
+                            </select>
+                        </p>
+                
+                
+                        <p>
+                            <label for="gender">Kön</label><br>
+                            <label><input type="radio" name="gender" value="male" checked="checked"> Man</label><br>
+                            <label><input type="radio" name="gender" value="female">Kvinna</label><br>
+                            <label><input type="radio" name="gender" value="female">Icke-binär</label><br>
+                            <label><input type="radio" name="gender" value="other">Annat</label><br>
+                        </p>
+                    </form>
+                    <button type="submit"><img src="https://cdn3.iconfinder.com/data/icons/social-network-actions/100/social-buttons-go-10-512.png" width="10" height="10"/>Skicka beställning</button>
+                </section>
+            </section>    
+        </main>
+        <footer><p align="center">copyright by Andreas</p></footer>
     </body>
 </html>

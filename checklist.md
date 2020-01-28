@@ -8,46 +8,46 @@ Before you submit the different parts of your lab, make sure that your project f
 
 ## 01 Git
 
-- [ ] Fork and clone the 1md034_students repository
+- [X] Fork and clone the 1md034_students repository
 
 
 ## 02 HTML
 
-- [ ] Ensure the website loads when opening http://localhost:3000/
+- [X] Ensure the website loads when opening http://localhost:3000/
 
 Create an index.html file which contains:
-- [ ] A title
-- [ ] A main headline and two section headlines
-- [ ] Semantic tags that correspond to the parts of your page
-- [ ] A section to select burgers that contains at least three items. Each item has at least:
-	- [ ] A name
-	- [ ] An image
-	- [ ] Information about allergies 
-- [ ] A section to collect customer information:
-	- [ ] First- and Last Name (in one field)
-	- [ ] E-Mail Address
-	- [ ] Street
-	- [ ] House Number (only allowing numbers in this field)
-	- [ ] Gender (male, female, do not wish to provide as radio buttons)
-- [ ] A button to place the order
+- [X] A title
+- [X] A main headline and two section headlines
+- [X] Semantic tags that correspond to the parts of your page
+- [X] A section to select burgers that contains at least three items. Each item has at least:
+	- [X] A name
+	- [X] An image
+	- [X] Information about allergies 
+- [X] A section to collect customer information:
+	- [X] First- and Last Name (in one field)
+	- [X] E-Mail Address
+	- [X] Street
+	- [X] House Number (only allowing numbers in this field)
+	- [X] Gender (male, female, do not wish to provide as radio buttons)
+- [X] A button to place the order
 
 ## 03 CSS
 
-- [ ] Create style.css and link to it from index.html
+- [X] Create style.css and link to it from index.html
 
 Add the following style/behaviour to your website (mostly in style.css but also requiring changes in index.html):
-- [ ] Define a base line font for your site by putting the style rule on "body"
-- [ ] Define a larger base line font size
-- [ ] A CSS rule to make the allergy information bold
-- [ ] Define text and background color for one of your two sections (burger selection and customer information)
-- [ ] Create an empty style definition for the section with unchanged text and background
-- [ ] Change the cursor and background when hovering over the order button
-- [ ] Define a table width and center it
-- [ ] Add margins to the sections and the order button
-- [ ] Add a border to the two sections
-- [ ] Add an image after your headline and make it slightly transparent
-- [ ] Place the image behind your headline to finalize your header
-- [ ] Use a grid layout instead of tables for the burger selection section
+- [X] Define a base line font for your site by putting the style rule on "body"
+- [X] Define a larger base line font size
+- [X] A CSS rule to make the allergy information bold
+- [X] Define text and background color for one of your two sections (burger selection and customer information)
+- [X] Create an empty style definition for the section with unchanged text and background
+- [X] Change the cursor and background when hovering over the order button
+- [X] Define a table width and center it
+- [X] Add margins to the sections and the order button
+- [X] Add a border to the two sections
+- [X] Add an image after your headline and make it slightly transparent
+- [X] Place the image behind your headline to finalize your header
+- [X] Use a grid layout instead of tables for the burger selection section
 
 
 ## 04 JavaScript and Vue
