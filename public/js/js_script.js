@@ -28,3 +28,5 @@ console.log(nameAndKcal(burger3));
 console.log(nameAndKcal(burger4));
 console.log(nameAndKcal(burger5));
 
+//document.getElementById("myDiv").innerHTML = "Välj en burgare";
+
