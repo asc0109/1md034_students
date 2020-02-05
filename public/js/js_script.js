@@ -183,3 +183,27 @@ for (i; i < 5;i++)
 }
 */
 
+/*
+function writeConsole (fullname) {
+    let name = document.getElementById('fullname').value;
+    let email = document.getElementById('email').value;
+    let street = document.getElementById('street').value;
+    let husnr = document.getElementById('street1').value;
+    let payment = document.getElementById('payment').value;
+    let radios = document.getElementsByName('gender');
+    let gender = ' ';
+    for(var i = 0; i < radios.length; i++)
+        {
+            if(radios[i].checked)
+                {
+                    gender = radios[i].value;
+                    break;
+                }
+        }
+    let values = [name, email, street, husnr, payment, gender];
+    console.log('knapp klickad ' + values);
+}
+let myButton = document.getElementById('order');
+myButton.onclick = writeConsole;
+*/
+

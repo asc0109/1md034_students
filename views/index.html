@@ -23,12 +23,13 @@
                 <div id="wrapper">
                     <div class="box" v-for="burger in burgers" v-if="burger.allergy">
                         <p> {{ burger.name}} </p>
+                        <input type="radio" name="userBurger" v-bind:value="burger.name" v-model="userBurger"/>
                         <img v-bind:src="burger.imgPath">
                         Innehåll: {{ burger.ingredients }} <br>
                         Kcal: {{ burger.kcal }} <br>
                         Allergi: {{ burger.allergy }}
                     </div>
-                    <div v-else>
+                    <div class="box" v-else>
                         <p> {{ burger.name}} </p>
                         <img v-bind:src="burger.imgPath">
                         Innehåll: {{ burger.ingredients }} <br>
@@ -83,34 +84,35 @@
                     </div>
                 </div>
                 -->
+                </div>
             </section>
             <section id="kundinfo">
                 <section id="contact">
                     <h2>Kund information</h2>
                     <p>Här fyller du i nödvändig information om dig själv.</p>
                     <h3>Leverans information</h3>
-                    <form>
+                    <form id="orders">
                         <p>
                             <label for="fullname">Fullständigt namn</label><br>
-                            <input type="text" id="fullname" name="fn" required="required" placeholder="För- och efter namn" />
+                            <input type="text" id="fullname" name="fn" required="required" placeholder="För- och efter namn"  v-model="fullname"/>
                         </p>
                         <p>
                             <label for="email">E-mail</label><br>
-                            <input type="email" id="email" name="em" required="required" placeholder="E-mail adress" />
+                            <input type="email" id="email" name="em" required="required" placeholder="E-mail adress" v-model="email"/>
                         </p>
                         <p>
                             <label for="street">Gatunamn</label><br>
-                            <input type="text" id="street" name="st" required="required" placeholder="Gatunamn" />
+                            <input type="text" id="street" name="st" required="required" placeholder="Gatunamn" v-model="street"/>
                         </p>
                         <p>
                             <label for="street">Husnr</label><br>
-                            <input type="number" id="street1" name="st" required="required" placeholder="Husnr" />
+                            <input type="number" id="street1" name="st" required="required" placeholder="Husnr" v-model="street1"/>
                         </p>
                     
               
                         <p>
                             <label for="payment">Betalnings alternativ</label><br>
-                            <select id="payment" name="pmt">
+                            <select  v-model="selected" id="selected" name="pmt">
                                 <option selected="selected">Visa</option>
                                 <option>Mastercard</option>
                                 <option>Amex Black Card</option>
@@ -121,13 +123,14 @@
                 
                         <p>
                             <label for="gender">Kön</label><br>
-                            <label><input type="radio" name="gender" value="male" checked="checked"> Man</label><br>
-                            <label><input type="radio" name="gender" value="female">Kvinna</label><br>
-                            <label><input type="radio" name="gender" value="female">Icke-binär</label><br>
-                            <label><input type="radio" name="gender" value="other">Annat</label><br>
+                            <input type="radio" name="gender" id="male" value="male" checked="checked" v-model="gender"> <label for="male">Man</label><br>
+                            <input type="radio" name="gender" id="female" value="female" v-model="gender"><label for="female">Kvinna</label><br>
+                            <input type="radio" name="gender" id="non-binear" value="non-binear" v-model="gender"><label for="non-binear">Icke-binär</label><br>
+                            <input type="radio" name="gender" id="other" value="other" v-model="gender"><label for="other">Annat</label><br>
                         </p>
                     </form>
-                    <button type="submit"><img src="https://cdn3.iconfinder.com/data/icons/social-network-actions/100/social-buttons-go-10-512.png" width="10" height="10"/>Skicka beställning</button>
+                    <button v-on:click="markDone()" id="order" type="submit"><img src="https://cdn3.iconfinder.com/data/icons/social-network-actions/100/social-buttons-go-10-512.png" width="10" height="10"/>Skicka beställning</button>
+                    <p id="infoList"></p>
                 </section>
             </section>    
         </main>
