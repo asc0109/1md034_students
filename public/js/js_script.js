@@ -29,6 +29,7 @@ console.log(nameAndKcal(burger3));
 console.log(nameAndKcal(burger4));
 console.log(nameAndKcal(burger5));
 
+/*
 let wrapper = document.getElementById('wrapper');
 let burgers = [burger1, burger2, burger3, burger4, burger5];
 let i = 0;
@@ -64,7 +65,7 @@ for(i; i < burgers.length; i++)
 
     wrapper.appendChild(burgerDiv);
 }
-
+*/
 /*
 let div1 = document.createElement('div');
 let img1 = document.createElement('img');

@@ -6,7 +6,7 @@
         <link rel="stylesheet" type="text/css" href="./css/style.css">
         <script src="https://vuejs.org/js/vue.js"></script>
         <script src="js/js_script.js" defer></script>
-        <script src="js/vue_script.js"></script>
+        <script src="js/vue_script.js" defer></script>
     </head>
     <body>
         <main>
@@ -19,6 +19,17 @@
                 <p>Här väljer du vilker hamburgare du vill ha.</p>
                 
                 <div id="wrapper">
+                    <div class="box" v-for="burger in burgers" v-if="burger.allergy">
+                        <p> {{ burger.name}} </p>
+                        <img v-bind:src="burger.imgPath">
+                        Innehåll: {{ burger.ingredients }}
+                        Allergi: {{ burger.allergy }}
+                    </div>
+                    <div v-else>
+                        <p> {{ burger.name}} </p>
+                        <img v-bind:src="burger.imgPath">
+                        Innehåll: {{ burger.ingredients }}
+                    </div>
                     <!--
                     <div class="box a">
                         <p>The Void Burger</p>
