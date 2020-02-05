@@ -22,14 +22,14 @@
                     <div class="box" v-for="burger in burgers" v-if="burger.allergy">
                         <p> {{ burger.name}} </p>
                         <img v-bind:src="burger.imgPath">
-                        Innehåll: {{ burger.ingredients }}
+                        Innehåll: {{ burger.ingredients }} <br>
                         Kcal: {{ burger.kcal }} <br>
                         Allergi: {{ burger.allergy }}
                     </div>
                     <div v-else>
                         <p> {{ burger.name}} </p>
                         <img v-bind:src="burger.imgPath">
-                        Innehåll: {{ burger.ingredients }}
+                        Innehåll: {{ burger.ingredients }} <br>
                         Kcal: {{ burger.kcal }} <br>
                     </div>
                     <!--
