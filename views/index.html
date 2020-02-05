@@ -23,12 +23,14 @@
                         <p> {{ burger.name}} </p>
                         <img v-bind:src="burger.imgPath">
                         Innehåll: {{ burger.ingredients }}
+                        Kcal: {{ burger.kcal }} <br>
                         Allergi: {{ burger.allergy }}
                     </div>
                     <div v-else>
                         <p> {{ burger.name}} </p>
                         <img v-bind:src="burger.imgPath">
                         Innehåll: {{ burger.ingredients }}
+                        Kcal: {{ burger.kcal }} <br>
                     </div>
                     <!--
                     <div class="box a">
