@@ -1,3 +1,4 @@
+/*
 function MenuItem(name, ingredients, allergy, kcal, stringPath) {
     "use strict";
     this.name = name;
@@ -11,7 +12,8 @@ function nameAndKcal(burger) {
     "use strict";
     return burger.name + " " + burger.kcal + "kcal";
 }
-
+*/
+/*
 let burger1 = new MenuItem("The Void Burger", "bröd", "gluten", "60", "https://previews.123rf.com/images/ha4ipuri/ha4ipuri1806/ha4ipuri180600022/103956150-hamburger-bread-or-bun-without-anything-isolated-on-white-background-clipping-path.jpg");
 
 let burger2 = new MenuItem("The Cheese Burger", "Bröd, 90g nötfärsburgare, ost, sallad, tomat, gurka, hamburgare dressing", "gluten och laktose", "450", "https://p7.hiclipart.com/preview/520/119/677/french-fries-cheeseburger-whopper-buffalo-burger-hamburger-big-burger.jpg");
@@ -28,6 +30,7 @@ console.log(nameAndKcal(burger2));
 console.log(nameAndKcal(burger3));
 console.log(nameAndKcal(burger4));
 console.log(nameAndKcal(burger5));
+*/
 
 /*
 let wrapper = document.getElementById('wrapper');
@@ -44,7 +47,7 @@ for(i; i < burgers.length; i++)
     
     burgerDiv.classList.add('box');
     
-    burgerImg.src = burgers[i].stringPath;
+    burgerImg.src = burgers[i].imgPath;
     burgerImg.height = 180;
     burgerImg.width = 180;
     
