@@ -23,7 +23,7 @@
                 <div id="wrapper">
                     <div class="box" v-for="burger in burgers" v-if="burger.allergy">
                         <p> {{ burger.name}} </p>
-                        <input type="radio" name="userBurger" v-bind:value="burger.name" v-model="userBurger"/>
+                        <input type="checkbox" name="userBurger" v-bind:value="burger.name" />
                         <img v-bind:src="burger.imgPath">
                         Innehåll: {{ burger.ingredients }} <br>
                         Kcal: {{ burger.kcal }} <br>
@@ -88,9 +88,9 @@
             </section>
             <section id="kundinfo">
                 <section id="contact">
-                    <h2>Kund information</h2>
+                    <h2>Kundinformation</h2>
                     <p>Här fyller du i nödvändig information om dig själv.</p>
-                    <h3>Leverans information</h3>
+                    <h3>Leveransinformation</h3>
                     <form id="orders">
                         <p>
                             <label for="fullname">Fullständigt namn</label><br>
@@ -105,13 +105,13 @@
                             <input type="text" id="street" name="st" required="required" placeholder="Gatunamn" v-model="street"/>
                         </p>
                         <p>
-                            <label for="street">Husnr</label><br>
+                            <label for="street">Husnr.</label><br>
                             <input type="number" id="street1" name="st" required="required" placeholder="Husnr" v-model="street1"/>
                         </p>
                     
               
                         <p>
-                            <label for="payment">Betalnings alternativ</label><br>
+                            <label for="payment">Betalningsalternativ</label><br>
                             <select  v-model="selected" id="selected" name="pmt">
                                 <option selected="selected">Visa</option>
                                 <option>Mastercard</option>
@@ -130,7 +130,7 @@
                         </p>
                     </form>
                     <button v-on:click="markDone()" id="order" type="submit"><img src="https://cdn3.iconfinder.com/data/icons/social-network-actions/100/social-buttons-go-10-512.png" width="10" height="10"/>Skicka beställning</button>
-                    <p id="infoList"></p>
+                    {{ info }}
                 </section>
             </section>    
         </main>

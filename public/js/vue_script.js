@@ -6,37 +6,26 @@ const vm = new Vue({
         email: '',
         street: '',
         street1: '',
-        selected: '',
-        gender: '',
-        userBurger: '',
+        selected: 'Visa',
+        gender: 'male',
         info: '',
     },
     methods: {
         markDone: function() {
-            let para = document.getElementById('infoList');
-            para.innerHTML = '';
             let radios = document.getElementsByName('gender');
             let burgList = document.getElementsByName('userBurger');
             let result = '';
             let burgerRes = '';
-            for(var i = 0; i < radios.length; i++) 
-                {
-                    if(radios[i].checked)
-                        {
-                            result = radios[i];
-                            break;
-                        }
-                }
+
             for(var j = 0; j < burgList.length; j++) {
                 if(burgList[j].checked) {
-                    burgerRes = burgList[j];
-                    break;
+                    burgerRes = burgerRes + ', ' + burgList[j].value;
                 }
-            }
-            let info1 = document.createTextNode(fullname.value +' '+ email.value +' '+ street.value +' '+ street1.value +' '+ selected.value +' '+ result.value +' '+ burgerRes.value);
+            } 
             
-            para.appendChild(info1);
-            console.log(fullname.value +' '+ email.value +' '+ street.value +' '+ street1.value +' '+ selected.value +' '+ result.value +' '+ burgerRes.value);    
+            this.info = fullname.value +' '+ email.value +' '+ street.value +' '+ street1.value +' '+ selected.value +' '+ this.gender +' '+ burgerRes;
+
+            console.log(fullname.value +' '+ email.value +' '+ street.value +' '+ street1.value +' '+ selected.value +' '+ result.value +' '+ burgerRes);    
         }
     },
 })
