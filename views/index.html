@@ -6,8 +6,14 @@
         <link rel="stylesheet" type="text/css" href="./css/style.css">
         <script src="https://vuejs.org/js/vue.js"></script>
         <script type="text/javascript" src="js/menu.js"></script>
+        <script src="/socket.io/socket.io.js" defer></script>
         <script src="js/js_script.js" defer></script>
         <script src="js/vue_script.js" defer></script>
+        
+        <link rel="stylesheet" href="css/deli-very.css">
+        <script src="/vue/vue.js" defer></script>
+        
+        
         
     </head>
     <body>
@@ -99,17 +105,7 @@
                         <p>
                             <label for="email">E-mail</label><br>
                             <input type="email" id="email" name="em" required="required" placeholder="E-mail adress" v-model="email"/>
-                        </p>
-                        <p>
-                            <label for="street">Gatunamn</label><br>
-                            <input type="text" id="street" name="st" required="required" placeholder="Gatunamn" v-model="street"/>
-                        </p>
-                        <p>
-                            <label for="street">Husnr.</label><br>
-                            <input type="number" id="street1" name="st" required="required" placeholder="Husnr" v-model="street1"/>
-                        </p>
-                    
-              
+                        </p>           
                         <p>
                             <label for="payment">Betalningsalternativ</label><br>
                             <select  v-model="selected" id="selected" name="pmt">
@@ -129,6 +125,17 @@
                             <input type="radio" name="gender" id="other" value="other" v-model="gender"><label for="other">Annat</label><br>
                         </p>
                     </form>
+                    
+                    <div class="view-box">
+                        <div id="dots" v-on:click="addOrder">
+                            <div 
+          v-for="(order, key) in orders"
+          v-bind:style="{ left: order.details.x + 'px', top: order.details.y + 'px'}">
+                                {{key}}
+                            </div>
+                        </div>
+                    </div>
+                    
                     <button v-on:click="markDone()" id="order" type="submit"><img src="https://cdn3.iconfinder.com/data/icons/social-network-actions/100/social-buttons-go-10-512.png" width="10" height="10"/>Skicka beställning</button>
                     {{ info }}
                 </section>
